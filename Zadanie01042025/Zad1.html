@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    #flex-container{
+        display: flex;
+        border: 2px solid black;
+        justify-content: space-evenly;
+        align-items: stretch;
+    }
+    #flex-container > div{
+        margin: 10px;
+        padding: 200px;
+    }
+    #column{
+        background-color: lightblue;
+        width: 100%;
+        text-align: center;
+    }
+    #flex-container2{
+        border: 2px solid black;
+        display: flex;
+        justify-content: center;
+    }
+    #flex-container2 > div{
+        margin: 1%;
+    }
+    #box{
+        text-align: center;
+        background-color: lightblue;
+        padding: 30px;
+    }
+</style>
+
+<body>
+    <div id="flex-container">
+        <div id="column">
+            Kolumna 1
+        </div>
+        <div id="column">
+            kolumna 2
+        </div>
+        <div id="column">
+            kolumna 3
+        </div>
+    </div>
+    <br>
+    <div id="flex-container2">
+        <div id="box">
+            Element 1
+        </div>
+        <div id="box">
+            Element 2
+        </div>
+        <div id="box">
+            Element 3
+        </div>
+    </div>
+</body>
+</html>
