@@ -9,6 +9,7 @@
 <style>
     body{
         margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
     }
     #mainpage{
         display: flex;
@@ -34,30 +35,59 @@
     #midbox{
         display: grid;
         margin:auto;
-        height: 300px;
+        height: 350px;
         width: 100%;
-    }
-    #function-boxes{
-        display: grid;
         grid-gap: 10px;
-        grid-template-columns: [col1-start] 100px  [col2-start] 100px  [col3-start] 100px [col3-end];
-        grid-template-rows: [row1-start] auto [row2-start] auto [row2-end];
+        
+        grid-template-columns: [col1-start] 25%  [col2-start] 25%  [col3-start] 25% [col4-start] 25% [col4-end];
+        grid-template-rows: [row1-start] 50% [row2-start] 50% [row2-end];
+        padding: 2%;
     }
+    /* #function-boxes{
+        display: grid;
+        grid-column: 2/3;
+        grid-row: 1/2;
+        width: 100%;
+    } */
     #box1{
+        display: grid;
         border: 1px solid black;
-        width: 15%;
-    }
-    #info-box{
-        border: 1px solid black;
+        width: 100%;
+        grid-column:2;
+        grid-row: 1;
     }
     #box2{
+        display: grid;
         border: 1px solid black;
+        width: 100%;
+        grid-column: 3;
+        grid-row: 1;
+    }
+    #info-box{
+        display: grid;
+        border: 1px solid black;
+        grid-column: 4;
+        grid-row: 1 / -1;
+        height: 100%;
+    }
+    #box3{
+        display: grid;
+        border: 1px solid black;
+        grid-column-start: 2;
+        grid-column-end: -2;
+        grid-row: 2;
+        width: 100%;
     }
     #footer{
         width: 100%;
         background-color: lightgray;
         align-content: 100%;
         text-align: center;
+    }
+    #maintext {
+        display: grid;
+        grid-column: 1;
+        grid-row: 1 / 2;
     }
 
 </style>
@@ -75,25 +105,27 @@
                 <div id="maintext">
                     <h3>Witaj na naszej skomplikowanej stronie!</h3>
                 </div>
-                    <div id="function-boxes">
+                    <!-- <div id="function-boxes"> -->
                             <div id="box1">
                             <h3>Funkcja 1</h3>
                             <p>Opis funkcji 1</p>
                         </div>
-                        <div id="box1">
+                        <div id="box2">
                             <h3>Funkcja 2</h3>
                             <p>Opis funkcji 2</p>
                         </div>
-                        <div id="box2">
+                        <div id="box3">
                             <h3>Funkcja 3</h3>
                             <p>Opis funkcji 3</p>
                         </div>
+                        <div id="info-box">
+                            <h3>Dodatkowe informacje</h3>
+                            <p>...</p>
+                        </div>
                     </div>
-            </div>
-                <div id="info-box">
-                    <h3>Dodatkowe informacje</h3>
-                    <p>...</p>
-                </div>
+                    
+            <!-- </div> -->
+                
         <div id="footer">
             <p>&#169 2023 Skomplikowana strona z flexboxem. Wszelkie prawa zastrzeżone.</p>
         </div>
