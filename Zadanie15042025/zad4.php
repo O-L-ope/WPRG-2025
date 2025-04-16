@@ -21,35 +21,41 @@
 </style>
 
 <body>
-    <form method="POST" action="">
-        <p>Imię: <input type="text" name="imie"></p>
-        <p>Nazwisko: <input type="text" name="nazwisko"></p>
-        <p>Adres e-mail: <input type="email" name="emailaddress"></p>
-        <p>Haslo: <input type="password" name="haslo"></p>
-        <p>Wiek: <input type="number" name="wiek"></p>
-        <input type="submit" name="register_button" value="Zarejestruj sie">
-    </form>
-    <?php
-        function data_to_table($imie, $nazwisko, $emailaddress, $haslo, $wiek) {
-            echo '<table>';
-            echo "<tr><td>Imie: $imie</td></tr>";
-            echo "<tr><td>Nazwisko: $nazwisko</td></tr>";
-            echo "<tr><td>Email: $emailaddress</td></tr>";
-            echo "<tr><td>Haslo: $haslo</td></tr>";
-            echo "<tr><td>Wiek: $wiek</td></tr>";
-            echo '</table>';
-        }
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $imie = $_POST["imie"];
-            $nazwisko = $_POST["nazwisko"];
-            $emailaddress = $_POST["emailaddress"];
-            $haslo = $_POST["haslo"];
-            $wiek = $_POST["wiek"];
-            data_to_table($imie, $nazwisko, $emailaddress, $haslo, $wiek);
-        }
+<form method="POST" action="">
+    <p>Imię: <input type="text" name="imie"></p>
+    <p>Nazwisko: <input type="text" name="nazwisko"></p>
+    <p>Adres e-mail: <input type="email" name="emailaddress"></p>
+    <p>Haslo: <input type="password" name="haslo"></p>
+    <p>Wiek: <input type="number" name="wiek"></p>
+    <input type="submit" name="register_button" value="Zarejestruj sie">
+</form>
+<?php
+function data_to_table($imie, $nazwisko, $emailaddress, $haslo, $wiek) {
+    echo '<table>';
+    echo "<tr><td>Imie: $imie</td></tr>";
+    echo "<tr><td>Nazwisko: $nazwisko</td></tr>";
+    echo "<tr><td>Email: $emailaddress</td></tr>";
+    echo "<tr><td>Haslo: $haslo</td></tr>";
+    echo "<tr><td>Wiek: $wiek</td></tr>";
+    echo '</table>';
+}
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $imie = $_POST["imie"];
+    $nazwisko = $_POST["nazwisko"];
+    $emailaddress = $_POST["emailaddress"];
+    $haslo = $_POST["haslo"];
+    $wiek = $_POST["wiek"];
+
+    if (!is_numeric($wiek) || is_numeric($imie) || is_numeric($nazwisko)) {
+        echo "Blad";
+    } else{
+        data_to_table($imie, $nazwisko, $emailaddress, $haslo, $wiek);
+    }
+
+}
 
 
 
-    ?>
+?>
 </body>
 </html>
