@@ -8,7 +8,8 @@
 </head>
 <body>
     <form method="POST">
-        <input type="text" id="tekst" name="tekst">
+        <label>Wpisz tekst:</label>
+        <input type="text" id="tekst" name="tekst"><br>
         <select id="operation" name="operation">
             <option value="odwrocenie">Odwróć</option>
             <option value="to_upper">Wielkie litery</option>
@@ -16,7 +17,7 @@
             <option value="countsymbols">Liczenie znaków</option>
             <option value="trimy">Usuń białe znaki</option>
 
-        </select>
+        </select><br>
         <!-- <input type="submit" value="Wykonaj" id="submit_button"> -->
         <button type="submit" id="submit_button">Wykonaj</button>
     </form>
@@ -76,7 +77,7 @@
                     break;
             }
             
-            echo "Wynik: ".$result;
+            echo "<div id='result_box'><h1>Wynik: ".$result."</h1></div>";
             }
 
     ?>
