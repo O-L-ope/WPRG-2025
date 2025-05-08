@@ -1,0 +1,39 @@
+body{
+    margin: 0;
+    /* background-image: linear-gradient(rgb(193, 9, 221), rgb(83, 68, 255)); */
+    background-color: black;
+}
+form{
+    text-align: center;
+    margin-top: 2.5%;
+}
+label{
+    color: white;
+    font-size: large;
+}
+#tekst{
+    width: 30%;
+    border-radius: 25px;
+}
+#operation{
+    margin-top: 1%;
+    box-shadow: 0 0 3px gold;
+    border: 2px solid white;
+    width: 10%;
+}
+#submit_button{
+    margin-top: 1%;
+    background: none;
+    color: white;
+    border: 2px solid white;
+    border-radius: 50px;
+    width: 10%;
+    height: 30px;
+}
+#result_box{
+    text-align: center;
+    margin-top: 1%;
+    color: white;
+    text-shadow: 0 0 3px gold;
+    font-size: larger;
+}
