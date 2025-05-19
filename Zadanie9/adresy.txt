@@ -1,0 +1,4 @@
+https://google.com;przykładowy opis odnośnika,
+https://google.com;działa rjgdjkgklfd,
+https://google.com;blah blah blah,
+https://google.com;przykładowy  dsadasdasda,
